@@ -35,7 +35,7 @@ export default class DOM {
         const istDiv = this.createDiv();
         this.app.appendChild(istDiv);
         istDiv.innerHTML = `
-            <h2>${istData.name}</h2>
+            <h2 class="city-name">${istData.name}</h2>
             <h4>${istData.main.temp}</h4>
             <h4>${istData.wind.speed}</h4>
         ` 
@@ -46,7 +46,7 @@ export default class DOM {
         const munDiv = this.createDiv();
         this.app.appendChild(munDiv);
         munDiv.innerHTML = `
-            <h2>${munData.name}</h2>
+            <h2 class="city-name">${munData.name}</h2>
             <h4>${munData.main.temp}</h4>
             <h4>${munData.wind.speed}</h4>
         ` 
