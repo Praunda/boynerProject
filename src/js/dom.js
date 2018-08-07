@@ -3,20 +3,16 @@ export default class DOM {
         this.app = document.getElementById('app')
     }
 
+
     mainText(){
         const header = document.createElement("H2");
         this.app.appendChild(header)
         header.innerText = 'BOYNER PROJECT';
     }
 
-    /* listUserName(userName) {
-      userName.forEach((item)=>{
-          const list = document.createElement("LI");
-          const node = document.createTextNode(`${item}`);
-          list.appendChild(node)
-          this.mainList.appendChild(list)
-      })
-    } */
+    createDiv() {
+        return document.createElement("DIV");
+    }
 
     /* const fiveDay = [];
         for (let i = 0; i < istData.list.length; i += 8) {
@@ -36,8 +32,7 @@ export default class DOM {
  */
 
     istWeather(istData) {
-        console.log('Istanbul', istData)
-        const istDiv = document.createElement("DIV");
+        const istDiv = this.createDiv();
         this.app.appendChild(istDiv);
         istDiv.innerHTML = `
             <h2>${istData.name}</h2>
@@ -48,8 +43,7 @@ export default class DOM {
     }
 
     munWeather(munData) {
-        console.log('Munich', munData)
-        const munDiv = document.createElement("DIV");
+        const munDiv = this.createDiv();
         this.app.appendChild(munDiv);
         munDiv.innerHTML = `
             <h2>${munData.name}</h2>
@@ -59,8 +53,7 @@ export default class DOM {
     }
 
     berWeather(berData) {
-        console.log('Berlin', berData)
-        const berDiv = document.createElement("DIV");
+        const berDiv = this.createDiv();
         this.app.appendChild(berDiv);
         berDiv.innerHTML = `
             <h2>${berData.name}</h2>
@@ -70,8 +63,7 @@ export default class DOM {
     }
 
     parWeather(parData) {
-        console.log('Paris', parData)
-        const parDiv = document.createElement("DIV");
+        const parDiv = this.createDiv();
         this.app.appendChild(parDiv);
         parDiv.innerHTML = `
             <h2>${parData.name}</h2>
@@ -81,8 +73,7 @@ export default class DOM {
     }
 
     helWeather(helData) {
-        console.log('Helsinki', helData)
-        const helDiv = document.createElement("DIV");
+        const helDiv = this.createDiv();
         this.app.appendChild(helDiv);
         helDiv.innerHTML = `
             <h2>${helData.name}</h2>
